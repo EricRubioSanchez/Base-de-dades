@@ -13,7 +13,7 @@ El perfil del consumidor "1dd74b3d-3373-45e0-88d4-b39bbf849476" ha sido borrado 
 2. Segona comanda
 `subscription-manager unregister`
   
-Output:
+   Output:
 ```
 Anulando el registro de: subscription.rhsm.redhat.com:443/subscription
 Se ha cancelado el registro del sistema.
