@@ -36,5 +36,25 @@ Nombre de usuario:
 Contraseña:
 El sistema ha sido registrado con ID: ed6dfdd5-b8d7-4c24-bee8-5cd36cf8beb9
 El nombre del sistema registrado es: localhost.localdomain
-
 ```
+2. Segona comanda
+`subscription-manager refresh`
+
+Output:
+```
+Todos los datos actualizados
+```
+3. Tercera comanda
+`subscription-manager attach --auto`
+
+Output:
+```
+Estatus de productos instalados:
+Nombre de producto: Red Hat Enterprise Linux for x86_64
+Estatus:            Suscrito
+```
+
+## Instalació
+### Desactivació de repositoris
+1. Primera comanda
+`
