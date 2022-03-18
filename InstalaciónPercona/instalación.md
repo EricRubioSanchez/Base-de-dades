@@ -3,7 +3,7 @@
 ## Reactivació Red Hat Enterpirse Linux
   1. Primera comanda
 
-    `subscription-manager remove --all`
+    subscription-manager remove --all
  
     Output:
     ```
