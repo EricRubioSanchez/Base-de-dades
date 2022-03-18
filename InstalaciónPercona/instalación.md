@@ -1,4 +1,4 @@
-#Instalació de Percona Server en Red Hat Enterprise Linux
+# Instalació de Percona Server en Red Hat Enterprise Linux
 
 
 1. Primera comanda
