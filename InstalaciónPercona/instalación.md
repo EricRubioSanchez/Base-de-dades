@@ -55,7 +55,7 @@
  ```
 
 ## Instalació
-### Desactivació de repositoris
+### Instalació del repositoris de Percona
 1. Primera comanda
 `yum -y update`
  Output:
@@ -71,5 +71,57 @@
  ===========================================================================================================
  Instalando:
  kernel                x86_64 4.18.0-348.20.1.el8_5                 rhel-8-for-x86_64-baseos-rpms    7.0 M
+ ...
+ ```
+2. Segona comanda
+`yum install https://repo.percona.com/yum/percona-release-latest.noarch.rpm`
+ Output:
+ ```
+ Actualización de repositorios de Subscription Management.
+ Última comprobación de caducidad de metadatos hecha hace 0:12:42, el vie 18 mar 2022 19:11:59 CET.
+ percona-release-latest.noarch.rpm                                           71 kB/s |  20 kB     00:00
+ Dependencias resueltas.
+ ===========================================================================================================
+  Paquete                       Arquitectura         Versión               Repositorio                 Tam.
+ ===========================================================================================================
+ Instalando:
+  percona-release               noarch               1.0-27                @commandline                20 k
+
+ Resumen de la transacción
+ ===========================================================================================================
+ Instalar  1 Paquete
+ 
+ Tamaño total: 20 k
+ Tamaño instalado: 32 k
+ ¿Está de acuerdo [s/N]?:
+ ...
+ ```
+3. Tercera comanda
+ `percona-release setup ps80`
+ Output:
+ ```
+  * Disabling all Percona Repositories
+ On Red Hat 8 systems it is needed to disable the following DNF module(s): mysql  to install Percona-Server
+ Do you want to disable it? [y/N] y
+ Disabling dnf module...
+ Actualización de repositorios de Subscription Management.
+ Percona Release release/noarch YUM repository                              8.7 kB/s | 1.8 kB     00:00
+ Dependencias resueltas.
+ ...
+ ```
+4. Quarta comanda
+ `yum install percona-server-server`
+ Output:
+ ```
+ Actualización de repositorios de Subscription Management.
+ Última comprobación de caducidad de metadatos hecha hace 0:12:42, el vie 18 mar 2022 19:11:59 CET.
+ percona-release-latest.noarch.rpm                                           71 kB/s |  20 kB     00:00
+ Dependencias resueltas.
+ ===========================================================================================================
+  Paquete                       Arquitectura         Versión               Repositorio                 Tam.
+ ===========================================================================================================
+ Instalando:
+  percona-release               noarch               1.0-27                @commandline                20 k
+
  ...
  ```
