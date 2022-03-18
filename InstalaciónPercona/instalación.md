@@ -57,4 +57,19 @@
 ## Instalació
 ### Desactivació de repositoris
 1. Primera comanda
-`
+`yum -y update`
+ Output:
+ ```
+ Actualización de repositorios de Subscription Management.
+ Red Hat Enterprise Linux 8 for x86_64 - AppStream (RPMs)                   4.3 MB/s |  39 MB     00:09
+ Red Hat Enterprise Linux 8 for x86_64 - BaseOS (RPMs)                       18 kB/s | 4.1 kB     00:00
+ Red Hat Enterprise Linux 8 for x86_64 - BaseOS (RPMs)                      5.6 MB/s |  45 MB     00:08
+ Última comprobación de caducidad de metadatos hecha hace 0:00:06, el vie 18 mar 2022 19:11:59 CET.
+ Dependencias resueltas.
+ ===========================================================================================================
+  Paquete               Arq.   Versión                               Repositorio                       Tam.
+ ===========================================================================================================
+ Instalando:
+ kernel                x86_64 4.18.0-348.20.1.el8_5                 rhel-8-for-x86_64-baseos-rpms    7.0 M
+ ...
+ ```
