@@ -4,10 +4,21 @@ sigui patata.
 ```
 El programa que realitza la tasca de securització es mysql_secure_installation.
 ```
+```
+Securing the MySQL server deployment.
+
+Enter password for user root:
+
+The existing password for the user account root has expired. Please set a new password.
+
+New password:
+
+Re-enter new password:
+The 'validate_password' component is installed on the server.
+The subsequent steps will run with the existing configuration
+of the component.
 2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades
 de Percona Server en el sistema operatiu?
-```
-
 ```
 3. A on es troba i quin nom rep el fitxer de configuració del SGBD Percona Server?
 ```
