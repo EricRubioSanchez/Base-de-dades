@@ -95,15 +95,22 @@ Query OK, 0 rows affected (0,01 sec)
 2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades
 de Percona Server en el sistema operatiu?
 ```
+La comanda per arrcancar el servei desde el sistema operatiu:
+sudo service mysql start
 
+La comanda per verificar status:
+sudo service mysql status
+
+La comanda per apagar servei:
+sudo service mysql stop
 ```
 3. A on es troba i quin nom rep el fitxer de configuració del SGBD Percona Server?
 ```
-
+Es troba al path  /etc/mysql/ i el nom del fitxer es my.cnf
 ```
 4. A on es troben físicament els fitxers de dades (per defecte). Com ho has sabut?
 ```
-
+Es troban en el path de /var/log/mysql
 ```
 5. Crea un usuari anomenat asix en el sistema operatiu i en SGBD de tal manera que aquest
 usuari del sistema operatiu no hagi d'introduir l'usuari i password cada vegada que cridem al
@@ -118,6 +125,19 @@ Usuari MySQL → asix / patata
 canviar aquest port a 33306 per exemple? Important: No realitzis els canvis. Només indica els
 passos que faries.
 ```
+Primer ens fiquem dintre del mysql amb aquetsa comanda:
+mysql -u root -p
+Despres utilitzem aquesta per veura com es diu la variable que escolta al port 3306:
+show global variables like 'port';
+Output:
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| port          | 3306  |
++---------------+-------+
+1 row in set (0,00 sec)
+Amb això sabem que la variable es diu port per tant per camviarla utilitzarem aixo:
+SET GLOBAL port=33306;
 
 ```
 7. Ensenya al professor que us podeu connectar al SGBD.
