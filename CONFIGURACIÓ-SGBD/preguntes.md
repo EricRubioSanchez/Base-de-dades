@@ -30,7 +30,7 @@ mysql> SOURCE <ruta_fitxer>/sakila-schema.sql;
 ```
 
 ```
-6. Compte el numero de sentències CREATE TABLE dins del general log mitjançant una sentència SQL.
+6. Compte el numero de sentències CREATE TABLE dins del general log mitjançant una sentència SQL.
 o Mostra quina sentència has utilitzat i mostra'n el resultat.
 ```
 
