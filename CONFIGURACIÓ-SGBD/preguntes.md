@@ -3,9 +3,15 @@ logs.cnf a on:
 Activa els logs que no ho estiguin per defecte i indica les configuracions necessàries 
 per activar-los. Indica les rutes dels fitxer de log de Binary, Slow Query i General. Quins 
 paràmetres has creat/modificat?
+```
+
+```
 2. Comprova l'estat de les opcions de log que has utilitzat mitjançant una sessió de mysql 
 client. 
 Exemple: (mysql> SHOW GLOBAL VARIABLES LIKE '%log')
+```
+
+```
 3. Modifica el fitxer de configuració i desactiva els logs de binary, slow query i genral. Nota: 
 Simplament desactiva'ls no borris altres paràmetres com la ruta dels fitxers, etc...
 4. Activa els logs en temps d'execució mitjançant la sentència SET GLOBAL. També canvia 
