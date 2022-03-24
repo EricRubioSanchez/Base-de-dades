@@ -37,3 +37,6 @@ o Mostra quina sentència has utilitzat i mostra'n el resultat.
 ```
 7. Executa una query mitjançant la funció SLEEP(11) per tal de que es guardi en el log de 
 Slow Query Log. Mostra el contingut del log demostrant-ho
+```
+
+```
