@@ -40,3 +40,28 @@ Slow Query Log. Mostra el contingut del log demostrant-ho
 ```
 
 ```
+8. Assegura't que el Binary Log estigui activat i borra tots els logs anteriors mitjançant la 
+sentència RESET MASTER.
+ Crea i esborra una base de dades anomenada foo. Utilitza la sentències:
+mysql> CREATE DATABASE foo;
+mysql> DROP DATABASE foo;
+ Mitjançant la sentència SHOW BINLOG EVENTS llista els events i comprova les sentències anteriors en quin fitxer de log estan.
+ Realitza un rotate log mitjançant la sentència FLUSH LOGS. Què realitza exactament 
+aquesta sentència?
+ Crea i esborra una altra base de dades com l'exemple anteior del foo. Però en aquest 
+cas anomena la base de dades bar
+ Llista tots els fitxers de log i els últims canvis mitjançant la sentència SHOW. Quina 
+sentència has utilitzat? Mostra'n el resultat.
+ Esborra el primer binary log. Quina sentència has utilitzat?
+ Utilitza el programa mysqlbinlog per mostrar el fitxer mysql-bin.000002 
+o Quin és el seu contingut?
+o Quin número d'event ha estat el de la creació de la base de dades bar?
+```
+
+```
+9. De quina manera podem desactivar el binary log només d’una sessió en concret. Imagina’t 
+que ets un administrador de la BD i no vols que les instruccions que facis es gravin en el 
+binary_log.
+```
+
+```
