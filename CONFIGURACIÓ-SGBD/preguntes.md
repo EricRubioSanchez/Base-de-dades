@@ -45,7 +45,7 @@ sentència RESET MASTER.
  Crea i esborra una base de dades anomenada foo. Utilitza la sentències:
 mysql> CREATE DATABASE foo;
 mysql> DROP DATABASE foo;
- Mitjançant la sentència SHOW BINLOG EVENTS llista els events i comprova les sentències anteriors en quin fitxer de log estan.
+ Mitjançant la sentència SHOW BINLOG EVENTS llista els events i comprova les sentències anteriors en quin fitxer de log estan.
  Realitza un rotate log mitjançant la sentència FLUSH LOGS. Què realitza exactament 
 aquesta sentència?
  Crea i esborra una altra base de dades com l'exemple anteior del foo. Però en aquest 
