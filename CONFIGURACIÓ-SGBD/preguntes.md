@@ -4,7 +4,9 @@ Activa els logs que no ho estiguin per defecte i indica les configuracions neces
 per activar-los. Indica les rutes dels fitxer de log de Binary, Slow Query i General. Quins 
 paràmetres has creat/modificat?
 ```
-
+Esta activat per defecte el log bin i log error.
+Per crear el fitxer utilitzem aquesta comanda:
+        nano /etc/percona/logs.cnf
 ```
 2. Comprova l'estat de les opcions de log que has utilitzat mitjançant una sessió de mysql 
 client. 
