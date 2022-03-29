@@ -13,18 +13,78 @@ En el meu cas abans de crear el fitxer vull crear el directori percona amb la co
 I per crear el fitxer utilitzem aquesta comanda:
         nano /etc/percona/logs.cnf
 
+Per activar els logs que estiguin desabilitats per defecte tindrem que utilitzar per començar aquetsa comanda:
+      sudo chown mysql:mysql logs.cnf
+Despres aquesta no posarem res dintre del fitxer:
+       nano /etc/my.cnf
+Entrem dintre de la ruta:
+       cd /var/lib/mysql/mysql
+I utilitzem aquesta comanda en la cual abaix del tot posarem aixo !include /etc/percona/logs.cnf :
+        sudo nano general_log.log
+Despres aquesta que no posem res dintre
+        sudo nano show_query_log.log
+Per confirmar aquestes dos:
+        sudo chown mysql:mysql general_log.log
+        sudo chown mysql:mysql show_query_log.log
+Tornem al path /etc/percona
+Editem el fitxer logs.cnf amb nano /etc/percona/logs.cnf y posem dintre:
 
+       [mysqld]
+
+       general_log = 1
+       log_output = FILE
+       general_log_file = /var/lib/mysql/mysql/general_log.log
+
+       slow_query_log = 1
+       slow_query_log_file = /var/lib/mysql/mysql/slow_query_log.log
+       long_query_time = 2
+
+Els parametres que he modificat son:
+Activem el log general i li canviem el path.
+Activem el slow query log, li canviem el path i posem que conti com slow query si triga 2 segonds.
+
+Les rutes del fitxers:
+Binary:
+    /var/lib/mysql/binlog.index 
+Slow Query:
+    /var/lib/mysql/mysql/slow_query_log.log  
+General:
+    /var/lib/mysql/mysql/general_log.log 
 ```
 2. Comprova l'estat de les opcions de log que has utilitzat mitjançant una sessió de mysql 
 client. 
 Exemple: (mysql> SHOW GLOBAL VARIABLES LIKE '%log')
 ```
-
+ show variables like '%log';
++----------------------------------+---------------------+
+| Variable_name                    | Value               |
++----------------------------------+---------------------+
+| back_log                         | 151                 |
+| general_log                      | ON                  |
+| innodb_api_enable_binlog         | OFF                 |
+| innodb_scrub_log                 | OFF                 |
+| log_statements_unsafe_for_binlog | ON                  |
+| relay_log                        | localhost-relay-bin |
+| slow_query_log                   | ON                  |
+| sync_binlog                      | 1                   |
+| sync_relay_log                   | 10000               |
++----------------------------------+---------------------+
 ```
 3. Modifica el fitxer de configuració i desactiva els logs de binary, slow query i genral. Nota: 
 Simplament desactiva'ls no borris altres paràmetres com la ruta dels fitxers, etc...
 ```
+Tornem al path /etc/percona
+Editem el fitxer logs.cnf amb nano /etc/percona/logs.cnf y posem dintre:
 
+       [mysqld]
+
+       general_log = 2
+       log_output = FILE
+       general_log_file = /var/lib/mysql/mysql/general_log.log
+
+       slow_query_log = 2
+       slow_query_log_file = /var/lib/mysql/mysql/slow_query_log.log
+       long_query_time = 2
 ```
 4. Activa els logs en temps d'execució mitjançant la sentència SET GLOBAL. També canvia 
 el destí de log general a una taula (paràmetre log_output). Quines són les sentències que 
