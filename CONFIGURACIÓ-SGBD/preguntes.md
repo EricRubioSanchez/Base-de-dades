@@ -116,6 +116,13 @@ llavors per desabilitar el log binary anem a la linia on posa # disable_log_bin 
 el destí de log general a una taula (paràmetre log_output). Quines són les sentències que 
 has utilitzat? A quina taula es guarden els dels del general log?
 ```
+Per començar utilitzarem la base de dades mysql amb la comanda:
+      use mysql;
+Per activar els logs en temps d'execució amb la sentència SET GLOBAL farem:
+      SET GLOBAL general_log = 'ON';
+Per canviar el destí de log general a una taula utilitzarem la sentència:
+      SET GLOBAL log_output = 'table';
+Es guarda a la taula general_log.
 
 ```
 5. Carrega la BD Sakila localitzada a la web de 
