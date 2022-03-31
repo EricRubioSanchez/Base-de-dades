@@ -161,7 +161,38 @@ o Mostra quina sentència has utilitzat i mostra'n el resultat.
 7. Executa una query mitjançant la funció SLEEP(11) per tal de que es guardi en el log de 
 Slow Query Log. Mostra el contingut del log demostrant-ho
 ```
+Sentencia:
+       Select(Sleep(11));
+Output:
+       +-------------+
+       | (Sleep(11)) |
+       +-------------+
+       |           0 |
+       +-------------+
+       1 row in set (11,00 sec)
 
+Reiniciem la maquina mysql amb la comanda service mysql restart
+i despres llegim les logs del slow_query amb aquesta comanda:
+            cat /var/lib/mysql/mysql/slow_query_log.log
+I ens surtira un output similar a aquest:
+
+/usr/sbin/mysqld, Version: 8.0.27-18 (Percona Server (GPL), Release 18, Revision 24801e21b45), Time: 2022-03-31T15:44:19.737747Z. started with:
+Tcp port: 3306  Unix socket: /var/lib/mysql/mysql.sock
+Time                 Id Command    Argument
+# Time: 2022-03-31T15:45:29.799236Z
+# User@Host: root[root] @ localhost []  Id:     8
+# Schema:   Last_errno: 0  Killed: 0
+# Query_time: 11.001218  Lock_time: 0.000000  Rows_sent: 1  Rows_examined: 1  Rows_affected: 0  Bytes_sent: 59
+SET timestamp=1648741518;
+Select(Sleep(11));
+/usr/sbin/mysqld, Version: 8.0.27-18 (Percona Server (GPL), Release 18, Revision 24801e21b45), Time: 2022-03-31T15:45:49.681462Z. started with:
+Tcp port: 3306  Unix socket: /var/lib/mysql/mysql.sock
+Time                 Id Command    Argument
+
+Dintre del output es pot apreciar la nostra sentencia sleep i el temps que ha trigat en ferla.
+# Query_time: 11.001218  Lock_time: 0.000000  Rows_sent: 1  Rows_examined: 1  Rows_affected: 0  Bytes_sent: 59
+SET timestamp=1648741518;
+Select(Sleep(11));
 ```
 8. Assegura't que el Binary Log estigui activat i borra tots els logs anteriors mitjançant la 
 sentència RESET MASTER.
