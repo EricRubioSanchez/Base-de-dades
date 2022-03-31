@@ -70,9 +70,10 @@ Exemple: (mysql> SHOW GLOBAL VARIABLES LIKE '%log')
 | sync_relay_log                   | 10000               |
 +----------------------------------+---------------------+
 ```
-3. Modifica el fitxer de configuració i desactiva els logs de binary, slow query i genral. Nota: 
+3. Modifica el fitxer de configuració i desactiva els logs de binary, slow query i general. Nota: 
 Simplament desactiva'ls no borris altres paràmetres com la ruta dels fitxers, etc...
 ```
+Per desabilitar el slow query i el general:
 Tornem al path /etc/percona
 Editem el fitxer logs.cnf amb nano /etc/percona/logs.cnf y posem dintre:
 
@@ -85,6 +86,31 @@ Editem el fitxer logs.cnf amb nano /etc/percona/logs.cnf y posem dintre:
        slow_query_log = 2
        slow_query_log_file = /var/lib/mysql/mysql/slow_query_log.log
        long_query_time = 2
+       
+Per desabilitar el log binary:
+utilitzem el nano /etc/my.cnf i ens surtira un output similar a aquest:
+# Percona Server template configuration
+#
+# For advice on how to change settings please see
+# http://dev.mysql.com/doc/refman/8.0/en/server-configuration-defaults.html
+
+[mysqld]
+#
+# Remove leading # and set to the amount of RAM for the most important data
+# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
+# innodb_buffer_pool_size = 128M
+#
+# Remove the leading "# " to disable binary logging
+# Binary logging captures changes between backups and is enabled by
+# default. It's default setting is log_bin=binlog
+# disable_log_bin
+#
+# Remove leading # to set options mainly useful for reporting servers.
+# The server defaults are faster for transactions and fast SELECTs.
+# Adjust sizes as needed, experiment to find the optimal values.
+
+llavors per desabilitar el log binary anem a la linia on posa # disable_log_bin i eliminen #, guardem el document i ja s'ha desabilitat. 
+
 ```
 4. Activa els logs en temps d'execució mitjançant la sentència SET GLOBAL. També canvia 
 el destí de log general a una taula (paràmetre log_output). Quines són les sentències que 
