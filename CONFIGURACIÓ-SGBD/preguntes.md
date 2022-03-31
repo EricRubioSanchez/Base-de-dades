@@ -130,6 +130,27 @@ o Descarrega't el fitxer sakila-schema.sql del Moodle.
 o carrega la BD dins del MySQL utilitzant la sentència:
 mysql> SOURCE <ruta_fitxer>/sakila-schema.sql;
 ```
+Anem a aquest enllaç per descarrgarla:
+       https://dev.mysql.com/doc/index-other.html
+       
+La instalem i la pasem a la maquina virtual en el meu cas ho he fet amb la aplicacio WinSCP
+       https://winscp.net/eng/download.php
+       
+I per transformarla a mysql utilitzem aquesta sentència:       
+       mysql> SOURCE /var/lib/mysql/mysql/sakila-schema.sql
+       
+L'Output tindria que ser similar a aquest:
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+...
 
 ```
 6. Compte el numero de sentències CREATE TABLE dins del general log mitjançant una sentència SQL.
