@@ -260,6 +260,39 @@ Output:
 +------------------------------------------------+-----------------------------+
 1 rows in set (0,00 sec)
 
+Utilitzem la sentència:
+FLUSH LOGS;
+Output:
+Query OK, 0 rows affected (0,01 sec)
+
+La sentència dels FLUSH LOGS serveix per limpiar els logs de dintre dels arxius de Binary logs, logs error i general log.
+
+Creem la base de dades bar:
+CREATE DATABASE bar;
+Output:
+Query OK, 1 row affected (0,00 sec)
+
+L'eliminem:
+DROP DATABASE bar;
+Output:
+Query OK, 0 rows affected (0,01 sec)
+
+He utilitzat la sentencia:
+SHOW BINARY LOGS;
+Output:
++---------------+-----------+-----------+
+| Log_name      | File_size | Encrypted |
++---------------+-----------+-----------+
+| binlog.000001 |       539 | No        |
+| binlog.000002 |       200 | No        |
+| binlog.000003 |       516 | No        |
++---------------+-----------+-----------+
+3 rows in set (0,00 sec)
+
+Per esborra la primera utilitzo:
+PURGE BINARY LOGS TO 'binlog.000002';
+Output:
+Query OK, 0 rows affected (0,00 sec)
 ```
 9. De quina manera podem desactivar el binary log només d’una sessió en concret. Imagina’t 
 que ets un administrador de la BD i no vols que les instruccions que facis es gravin en el 
