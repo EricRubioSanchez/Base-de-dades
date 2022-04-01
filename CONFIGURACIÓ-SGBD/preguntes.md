@@ -211,6 +211,29 @@ sentència has utilitzat? Mostra'n el resultat.
 o Quin és el seu contingut?
 o Quin número d'event ha estat el de la creació de la base de dades bar?
 ```
+M'aseguro que el Binary log estigui activat amb la comanda:
+SHOW VARIABLES LIKE 'log_bin';
+Output:
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| log_bin       | ON    |
++---------------+-------+
+1 row in set (0,01 sec)
+
+Borrem els logs amb la comanda 
+RESET MASTER;
+Output:
+Query OK, 0 rows affected (0,00 sec)
+
+Creem la base de dades foo:
+CREATE DATABASE foo;
+Output:
+Query OK, 1 row affected (0,00 sec)
+L'eliminem:
+DROP DATABASE foo;
+Output:
+Query OK, 1 row affected (0,00 sec)
 
 ```
 9. De quina manera podem desactivar el binary log només d’una sessió en concret. Imagina’t 
