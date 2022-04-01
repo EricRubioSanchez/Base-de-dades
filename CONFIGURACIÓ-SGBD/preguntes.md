@@ -235,6 +235,31 @@ DROP DATABASE foo;
 Output:
 Query OK, 1 row affected (0,00 sec)
 
+Utilitzem la sentència SHOW BINLOG EVENTS:
+Output:
++---------------+-----+----------------+-----------+-------------+--------------------------------------+
+| Log_name      | Pos | Event_type     | Server_id | End_log_pos | Info |
++---------------+-----+----------------+-----------+-------------+--------------------------------------+
+| binlog.000001 |   4 | Format_desc    |         1 |         125 | Server ver: 8.0.27-18, Binlog ver: 4 |
+| binlog.000001 | 125 | Previous_gtids |         1 |         156 |                                      |
+| binlog.000001 | 156 | Anonymous_Gtid |         1 |         233 | SET @@SESSION.GTID_NEXT= 'ANONYMOUS' |
+| binlog.000001 | 233 | Query          |         1 |         338 | CREATE DATABASE foo /* xid=5 */      |
+| binlog.000001 | 338 | Anonymous_Gtid |         1 |         415 | SET @@SESSION.GTID_NEXT= 'ANONYMOUS' |
+| binlog.000001 | 415 | Query          |         1 |         516 | DROP DATABASE foo /* xid=7 */        |
+| binlog.000001 | 516 | Stop           |         1 |         539 |                                      |
++---------------+-----+----------------+-----------+-------------+--------------------------------------+
+7 rows in set (0,00 sec)
+
+Per buscar en quin fitxer log estan ulitizo la sentència:
+SHOW VARIABLES LIKE 'log_bin_index';
+Output:
++------------------------------------------------+-----------------------------+
+| Variable_name                                  | Value                       |
++------------------------------------------------+-----------------------------+
+| log_bin_index                                  | /var/lib/mysql/binlog.index |
++------------------------------------------------+-----------------------------+
+1 rows in set (0,00 sec)
+
 ```
 9. De quina manera podem desactivar el binary log només d’una sessió en concret. Imagina’t 
 que ets un administrador de la BD i no vols que les instruccions que facis es gravin en el 
