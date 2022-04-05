@@ -310,5 +310,8 @@ Output:
 que ets un administrador de la BD i no vols que les instruccions que facis es gravin en el 
 binary_log.
 ```
-
+Per desactivar el binary log només d'una sessió en concret utilitzem la sentencia:
+ SET SESSION SQL_LOG_BIN = OFF;
+ Output:
+ Query OK, 0 rows affected (0,00 sec)
 ```
