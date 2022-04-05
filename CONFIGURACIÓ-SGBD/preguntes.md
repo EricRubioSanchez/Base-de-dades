@@ -329,4 +329,7 @@ Per tornar la conexió segura:
     4. Dintre de la secció de connection anem a la secció SSL.
     5.La primera label on posa USE SSL: posem if available.
 ```
-
+![image](https://user-images.githubusercontent.com/100956247/161779149-41869e44-b939-4618-8367-45390e04f051.png)
+```
+Ara no nomes no surt la sentencia sino que tampoc surt que el protocol es MYSQL.
+```
