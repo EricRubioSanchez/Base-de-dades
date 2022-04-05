@@ -321,4 +321,12 @@ Amb el wireshark obert llançem una sentencia en el mysql y parem el wireshark, 
 
 ```
 ![image](https://user-images.githubusercontent.com/100956247/161777487-f7584e3d-4ad6-44f0-a5af-71328567d95d.png)
+```
+Per tornar la conexió segura:
+    1. Anem al workbench
+    2. Li donen clic dret al servidor
+    3. Anem al Edit Connection
+    4. Dintre de la secció de connection anem a la secció SSL.
+    5.La primera label on posa USE SSL: posem if available.
+```
 
