@@ -318,5 +318,6 @@ Per desactivar el binary log només d'una sessió en concret utilitzem la senten
 1. Comprova mitjançant el programari WireShark que la connexió d'autentificació no és segura.
 ```
 Amb el wireshark obert llançem una sentencia en el mysql y parem el wireshark, dintre podem veure que 'Request Query' es pot llegir la nostra comanda lo que significa que la conexió no es segura.
+![image](https://user-images.githubusercontent.com/100956247/161777030-4f8ae6a5-b562-4d19-9093-af5dddf8c6d0.png)
 
 ```
