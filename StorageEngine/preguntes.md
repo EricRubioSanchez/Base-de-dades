@@ -11,7 +11,10 @@ Output:
 paràmetre de tal manera que les noves taules que creem a la BD per defecte utilitzin el motor 
 MyISAM?
 ```
-default-storage-engine = MyISAM
+Entrem en el my.cnf amb la comanda:
+     nano /etc/my.cnf
+I dintre escrivim aquesta linia.
+     default-storage-engine = MyISAM
 ```
 3. Com podem saber quin és el motor d'emmagatzematge per defecte?
 ```
