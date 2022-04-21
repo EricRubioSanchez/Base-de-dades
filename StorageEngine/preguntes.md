@@ -47,30 +47,21 @@ Tamaño total de la descarga: 14 M
 Tamaño instalado: 55 M
 ¿Está de acuerdo [s/N]?: s
 Descargando paquetes:
-percona-server-rocksdb-8.0.27-18.1.el8.x86_64.rpm                                                                                                                                                            1.4 MB/s |  14 MB     00:09
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Total                                                                                                                                                                                                        1.4 MB/s |  14 MB     00:09
-Ejecutando verificación de operación
-Verificación de operación exitosa.
-Ejecutando prueba de operaciones
-Prueba de operación exitosa.
-Ejecutando operación
-  Preparando          :                                                                                                                                                                                                                  1/1
-  Instalando          : percona-server-rocksdb-8.0.27-18.1.el8.x86_64                                                                                                                                                                    1/1
-  Ejecutando scriptlet: percona-server-rocksdb-8.0.27-18.1.el8.x86_64                                                                                                                                                                    1/1
+percona-server-rocksdb-8.0.27-18.1.el8.x86_64.rpm 
+...
 
+Despres l'activem amb la comanda:
+         ps-admin --enable-rocksdb -u root -p contraseña
+Output:
+Enter password:
 
- * This release of Percona Server is distributed with RocksDB storage engine.
- * Run the following script to enable the RocksDB storage engine in Percona Server:
+Checking if RocksDB plugin is available for installation ...
+INFO: ha_rocksdb.so library for RocksDB found at /usr/lib64/mysql/plugin/ha_rocksdb.so.
 
-        ps-admin --enable-rocksdb -u <mysql_admin_user> -p[mysql_admin_pass] [-S <socket>] [-h <host> -P <port>]
+Checking RocksDB engine plugin status...
+INFO: RocksDB engine plugin is not installed.
 
-
-  Verificando         : percona-server-rocksdb-8.0.27-18.1.el8.x86_64                                                                                                                                                                    1/1
-Productos instalados actualizados.
-
-Instalado:
-  percona-server-rocksdb-8.0.27-18.1.el8.x86_64
-
-¡Listo!
+Installing RocksDB engine...
+INFO: Successfully installed RocksDB engine plugin.
 ```
+![image](https://user-images.githubusercontent.com/100956247/164489035-61ce124c-1d1f-44bd-9bc5-3f5d9a72ec91.png)
