@@ -65,3 +65,25 @@ Installing RocksDB engine...
 INFO: Successfully installed RocksDB engine plugin.
 ```
 ![image](https://user-images.githubusercontent.com/100956247/164489035-61ce124c-1d1f-44bd-9bc5-3f5d9a72ec91.png)
+
+#ACTIVITAT 3 – STORAGE ENGINE MyRocks (1 punt)
+```
+DROP DATABASE IF EXISTS MyRocks;
+CREATE DATABASE MyRocks;
+USE MyRocks;
+CREATE TABLE Llocs(
+Lloc_id int unsigned not null AUTO_INCREMENT,
+nom varchar(30) not null,
+CONSTRAINT PK_lloc PRIMARY KEY (Lloc_id)
+)ENGINE=RocksDB;
+CREATE TABLE Rocks(
+Rock_id int unsigned not null AUTO_INCREMENT,
+nom varchar(30) not null,
+DatadeTrobada DATE not null,
+LlocdeTrobada varchar(30) not null,
+Comentari varchar(100),
+CONSTRAINT PK_rocks PRIMARY KEY(Rock_id))
+ENGINE=RocksDB;
+INSERT INTO Rocks(nom,DataDeTrobada,LlocdeTrobada,Comentari) VALUES ('Ametista','2022-04-21','Sevilla','En meitat del camp');
+INSERT INTO Llocs(nom) Values ('Sevilla');
+```
