@@ -66,6 +66,12 @@ INFO: Successfully installed RocksDB engine plugin.
 ```
 ![image](https://user-images.githubusercontent.com/100956247/164489035-61ce124c-1d1f-44bd-9bc5-3f5d9a72ec91.png)
 
+#ACTIVITAT 2 – STORAGE ENGINE CSV
+```
+Primer mirem que tinguem el csv a la base de dades i que el supporti. Aixó ho farem amb la sentencia:
+SHOW ENGINES;
+Amb aquesta sentencia podem veure que tenim support en el engine CSV.
+```
 #ACTIVITAT 3 – STORAGE ENGINE MyRocks (1 punt)
 ```
 DROP DATABASE IF EXISTS MyRocks;
