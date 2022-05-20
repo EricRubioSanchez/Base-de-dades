@@ -67,7 +67,7 @@ INFO: Successfully installed RocksDB engine plugin.
 ![image](https://user-images.githubusercontent.com/100956247/164489035-61ce124c-1d1f-44bd-9bc5-3f5d9a72ec91.png)
 
 
-#ACTIVITAT 3 – STORAGE ENGINE MyRocks (1 punt)
+# ACTIVITAT 3 – STORAGE ENGINE MyRocks (1 punt)
 ```
 DROP DATABASE IF EXISTS MyRocks;
 CREATE DATABASE MyRocks;
@@ -87,4 +87,39 @@ CONSTRAINT PK_rocks PRIMARY KEY(Rock_id))
 ENGINE=RocksDB;
 INSERT INTO Rocks(nom,DataDeTrobada,LlocdeTrobada,Comentari) VALUES ('Ametista','2022-04-21','Sevilla','En meitat del camp');
 INSERT INTO Llocs(nom) Values ('Sevilla');
+```
+# ACTIVITAT 4. INNODB part I. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (2 punts)
+
+1. Desactiva l’opció que ve per defecte de innodb_file_per_table
+```
+
+```
+3. Quins són els permisos i l'usuari i grup de la carpeta que conté el directori de dades (datadir
+```
+
+```
+4. Mostra quina és la mida del tablespace de sistema (System Tablespace). Per què té aquesta
+mida inicial?
+```
+
+```
+4. Importa la BD Sakila com a taules InnoDB (https://dev.mysql.com/doc/index-other.html)
+```
+
+```
+5. Quin/quins són els fitxers de dades? A on es troben i quina és la seva mida?
+```
+
+```
+6. Canvia la configuració del MySQL per:
+o Canviar la localització del directori de dades a /hd-mysql/
+o Tenir dos fitxers corresponents al tablespace de sistema complint:
+        ▪ Tots dos han de tenir la mateixa mida inicial (50MB)
+        ▪ El tablespace ha de créixer de 5MB en 5MB.
+        ▪ Situa aquests fitxers en una nova localització simulant el següent:
+                • /disk1/primer fitxer de dades → simularà un disc dur
+                • /disk2/segon fitxer de dades → simularà un segon disc dur.
+        ▪ (+0,5 punts) si les dues rutes anteriors són dos discs físics diferents
+```
+
 ```
