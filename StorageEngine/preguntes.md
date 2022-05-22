@@ -92,13 +92,13 @@ INSERT INTO Llocs(nom) Values ('Sevilla');
 
 1. Desactiva l’opció que ve per defecte de innodb_file_per_table
 ```
+SET GLOBAL innodb_file_per_table=OFF;
+```
+2. Quins són els permisos i l'usuari i grup de la carpeta que conté el directori de dades (datadir
+```
 
 ```
-3. Quins són els permisos i l'usuari i grup de la carpeta que conté el directori de dades (datadir
-```
-
-```
-4. Mostra quina és la mida del tablespace de sistema (System Tablespace). Per què té aquesta
+3. Mostra quina és la mida del tablespace de sistema (System Tablespace). Per què té aquesta
 mida inicial?
 ```
 
