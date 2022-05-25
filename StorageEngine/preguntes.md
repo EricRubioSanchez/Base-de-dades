@@ -139,3 +139,29 @@ o Tenir dos fitxers corresponents al tablespace de sistema complint:
 ```
 
 ```
+# ACTIVITAT 5. INNODB part II. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
+1. Partint de l'esquema anterior configura el Percona Server perquè cada taula generi el seu 
+propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vULgueu). 
+      • Indica quins són els canvis de configuració que has realitzat
+```
+
+```
+# ACTIVITAT 6. INNODB part III. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
+1. Crea un tablespace anomenat 'ts1' situat a /discs-mysql/disc1/ i col·loca les taules 
+actor, address i category de la BD Sakila.
+```
+
+```
+2. Crea un altre tablespace anomenat 'ts2' situat a /discs-mysql/disc2/ i col·loca-hi la 
+resta de taules.
+```
+
+```
+3. Comprova que pots realitzar operacions DML a les taules dels dos tablespaces.
+```
+
+```
+4. Quines comandes i configuracions has realitzat per fer els dos apartats anteriors?
+```
+
+```
