@@ -112,7 +112,16 @@ Per defecte esta posat en 12MG i incrementa 8 MG cada vegada que es troba sense 
 
 4. Importa la BD Sakila com a taules InnoDB (https://dev.mysql.com/doc/index-other.html)
 ```
+Com la taula Sakila te les taules amb InnoDB no fa falta canviar-hi les engines nomes instalar-ho.
 
+Anem a aquest enllaç per descarrgarla:
+       https://dev.mysql.com/doc/index-other.html
+       
+La instalem i la pasem a la maquina virtual en el meu cas ho he fet amb la aplicacio WinSCP
+       https://winscp.net/eng/download.php
+       
+I per transformarla a mysql utilitzem aquesta sentència:       
+       mysql> SOURCE /var/lib/mysql/mysql/sakila-schema.sql
 ```
 5. Quin/quins són els fitxers de dades? A on es troben i quina és la seva mida?
 ```
