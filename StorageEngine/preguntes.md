@@ -125,7 +125,8 @@ I per transformarla a mysql utilitzem aquesta sentència:
 ```
 5. Quin/quins són els fitxers de dades? A on es troben i quina és la seva mida?
 ```
-
+Aquest/s fitxers són els fitxers ibdata, a on es guardaran totes les dades de les taules de la BD. Incloent els índexs.
+El fitxer es troba dintre de la ruta /var/lib/mysql i per defecte la seva mida es de 12MG 
 ```
 6. Canvia la configuració del MySQL per:
 o Canviar la localització del directori de dades a /hd-mysql/
