@@ -130,9 +130,19 @@ El fitxer es troba dintre de la ruta /var/lib/mysql i per defecte la seva mida e
 ```
 6. Canvia la configuració del MySQL per:
 o Canviar la localització del directori de dades a /hd-mysql/
+```
+Per canviar al directori de dades anem al my.cnf i la linia que posa:
+datadir=/var/lib/mysql
+la canviem per la ruta /hd-mysql/
+````
 o Tenir dos fitxers corresponents al tablespace de sistema complint:
         ▪ Tots dos han de tenir la mateixa mida inicial (50MB)
-        ▪ El tablespace ha de créixer de 5MB en 5MB.
+```
+        Perquè dos fitxers ibdata tinguin la mateixa mida inicial de 50MB fem
+                [mysqld]
+        innodb_data_file_path=ibdata1:50M;ibdata2:50M:autoextend
+```
+   ▪ El tablespace ha de créixer de 5MB en 5MB.
         ▪ Situa aquests fitxers en una nova localització simulant el següent:
                 • /disk1/primer fitxer de dades → simularà un disc dur
                 • /disk2/segon fitxer de dades → simularà un segon disc dur.
