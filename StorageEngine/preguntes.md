@@ -96,13 +96,20 @@ SET GLOBAL innodb_file_per_table=OFF;
 ```
 2. Quins són els permisos i l'usuari i grup de la carpeta que conté el directori de dades (datadir
 ```
-
+Ho comprovem anan al /var/lib/mysql i utilitzant la comanda:
+ls -alist
+Ens retornara un output en el que dintre surtira aixó:
+101966892 12288 -rw-r-----   1 mysql mysql 12582912 may 25 16:36  ibdata1
 ```
 3. Mostra quina és la mida del tablespace de sistema (System Tablespace). Per què té aquesta
 mida inicial?
 ```
-
+Anem al MYSQL i dintre fem la sentencia:
+SHOW VARIABLES LIKE '%data_file%';
+Per defecte esta posat en 12MG i incrementa 8 MG cada vegada que es troba sense espai.
 ```
+![image](https://user-images.githubusercontent.com/100956247/170293017-029977b7-be27-48be-99a2-4420744a323c.png)
+
 4. Importa la BD Sakila com a taules InnoDB (https://dev.mysql.com/doc/index-other.html)
 ```
 
