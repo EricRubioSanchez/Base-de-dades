@@ -155,7 +155,7 @@ o Tenir dos fitxers corresponents al tablespace de sistema complint:
 ▪ Situa aquests fitxers en una nova localització simulant el següent:
                 • /disk1/primer fitxer de dades → simularà un disc dur
                 • /disk2/segon fitxer de dades → simularà un segon disc dur.
-                ![image](https://user-images.githubusercontent.com/100956247/170591619-220579c3-4190-456a-be13-17b7710ac5b9.png)
+                
 
 ```
 fdisk /dev/sdb1
@@ -180,9 +180,11 @@ sudo chmod 777 /disk2/lost+found/
 posem al mysql com a creador amb la comanda
 chown mysql:mysql /disk1
 chown mysql:mysql /disk2
+fem sudo nano /etc/fstab i escrivim el que hi ha a la imatge
 sudo mount -a per guardar que cada vegada que iniciem la maquina seguexien els canvis
 innodb_data_file_path =  /var/lib/mysql/ibdata:100G;/disk2/mysql/ibdata2:1000M:autoextend
 ```
+![image](https://user-images.githubusercontent.com/100956247/170591619-220579c3-4190-456a-be13-17b7710ac5b9.png)
 # ACTIVITAT 5. INNODB part II. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
 1. Partint de l'esquema anterior configura el Percona Server perquè cada taula generi el seu 
 propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vULgueu). 
