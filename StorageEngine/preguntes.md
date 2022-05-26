@@ -183,7 +183,11 @@ resta de taules.
 • LSN (Log Sequence Number)
 • L'últim LSN actualitzat a disc
 • Quin és l'últim LSN que se li ha fet Checkpoint
+```
+Si fem la sentenceia aquesta sentencia dintre del MYSQL:
 SHOW ENGINE INNODB STATUS\G;
+Y anem a la part de LOG
+```
 ![image](https://user-images.githubusercontent.com/100956247/170527453-048fa460-73c6-4f96-912e-85714fce822f.png)
 2. Com podem mirar el número de pàgines modificades (dirty pages)? I el número total de 
 pàgines?
