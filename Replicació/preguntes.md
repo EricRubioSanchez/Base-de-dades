@@ -2,24 +2,34 @@
 ## CONFIGURACIÓ MASTER
 • Verifica que el paràmetre server-id té un valor numèric (per defecte és 1).
 ```
-
+Per mirar quin parametre tenim fare nano /var/lib/mysql/auto.cnf
 ```
+![image](https://user-images.githubusercontent.com/100956247/170578968-41ee3a24-c6e6-4ab3-8c5e-714e1c6285d9.png)
+
 • Fes un FLUSH DELS LOGS utilitzant la comanda FLUSH LOGS dins del MySQL
 o mysql> FLUSH LOGS;
-```
-
-```
+![image](https://user-images.githubusercontent.com/100956247/170579132-51e30523-bd8f-44d8-9dbf-7819fee1b1bb.png)
 • Realitza una comprovació dels logs com a master mitjançant SHOW MASTER LOGS
 o mysql> SHOW MASTER LOGS
-```
+![image](https://user-images.githubusercontent.com/100956247/170579232-12f5cac4-b682-4faa-ba04-1497f99d1bba.png)
 
-```
 ## CONFIGURACIÓ SLAVE i MASTER
 • Realitza una còpia de la màquina virtual a on tinguis SGBD MySQL. Aquesta nova màquina serà
 que farà d'eslau.
 ```
+Despres de fer la copia tanco el servei mysql i esborro el auto.cnf perque quan engeguem fem la copia no tingui la mateixa server_id que el master.
+```
+![image](https://user-images.githubusercontent.com/100956247/170586003-5b564233-db74-48a3-bd45-957c04668655.png)
 
 ```
+Comprovem que el serverid no sigui el mateix:
+```
+Slave
+![image](https://user-images.githubusercontent.com/100956247/170585927-2afc5aa7-fb91-4958-a3e2-6590163b74d9.png)
+Master
+![image](https://user-images.githubusercontent.com/100956247/170586590-6cf5cb8d-1fdb-4e5b-ba0d-330c96335e9b.png)
+
+
 • Esbrina quina IP tenen cadascuna de les màquines (master, slave).
 ```
 
