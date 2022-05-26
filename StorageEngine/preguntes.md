@@ -133,7 +133,7 @@ o Canviar la localització del directori de dades a /hd-mysql/
 ```
 Per canviar al directori de dades anem al my.cnf i la linia que posa:
 datadir=/var/lib/mysql
-la canviem per la ruta /hd-mysql/
+la canviem per la ruta var/hd-mysql/
 ````
 o Tenir dos fitxers corresponents al tablespace de sistema complint:
         ▪ Tots dos han de tenir la mateixa mida inicial (50MB)
@@ -143,13 +143,16 @@ o Tenir dos fitxers corresponents al tablespace de sistema complint:
         innodb_data_file_path=ibdata1:50M;ibdata2:50M:autoextend
 ```
 ▪ El tablespace ha de créixer de 5MB en 5MB.
-```
 
-```
+![image](https://user-images.githubusercontent.com/100956247/170592034-13a6405d-1a9f-40e8-b210-aba004e0d9c9.png)
+
 ▪ Situa aquests fitxers en una nova localització simulant el següent:
                 • /disk1/primer fitxer de dades → simularà un disc dur
                 • /disk2/segon fitxer de dades → simularà un segon disc dur.
+                ![image](https://user-images.githubusercontent.com/100956247/170591619-220579c3-4190-456a-be13-17b7710ac5b9.png)
+
 ```
+sudo mount -a per guardar que cada vegada que iniciem la maquina seguexien els canvis
 innodb_data_file_path =  /var/lib/mysql/ibdata:100G;/disk2/mysql/ibdata2:1000M:autoextend
 ```
 # ACTIVITAT 5. INNODB part II. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
