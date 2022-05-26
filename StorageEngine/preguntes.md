@@ -178,3 +178,4 @@ resta de taules.
 ```
 
 ```
+![image](https://user-images.githubusercontent.com/100956247/170527453-048fa460-73c6-4f96-912e-85714fce822f.png)
