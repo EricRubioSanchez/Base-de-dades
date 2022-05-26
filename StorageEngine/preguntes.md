@@ -131,9 +131,15 @@ El fitxer es troba dintre de la ruta /var/lib/mysql i per defecte la seva mida e
 6. Canvia la configuració del MySQL per:
 o Canviar la localització del directori de dades a /hd-mysql/
 ```
+Creem el nou directori:
+mkdir /hd-mysql
+li donem permisos amb:
+sudo chmod 777 /hd-mysql
+i li canviem el creador amb la comanda:
+chown mysql:mysql /hd-mysql
 Per canviar al directori de dades anem al my.cnf i la linia que posa:
 datadir=/var/lib/mysql
-la canviem per la ruta var/hd-mysql/
+la canviem per la ruta /hd-mysql
 ````
 o Tenir dos fitxers corresponents al tablespace de sistema complint:
         ▪ Tots dos han de tenir la mateixa mida inicial (50MB)
@@ -152,6 +158,28 @@ o Tenir dos fitxers corresponents al tablespace de sistema complint:
                 ![image](https://user-images.githubusercontent.com/100956247/170591619-220579c3-4190-456a-be13-17b7710ac5b9.png)
 
 ```
+fdisk /dev/sdb1
+i
+fdisk /dev/sdb2
+per guardar els discs
+el hi donem permisor amb
+sudo chmod 777 /dev/sdb1
+sudo chmod 777 /dev/sdb2
+creem el directori amb
+mkdir /disk1
+mkdir /disk2
+i despres posem posem la comanda
+mkfs.ext4 /dev/sdb1
+mkfs.ext4 /dev/sdb2
+juntem el disc amb el directori
+mount /dev/sdb1 /disk1
+mount /dev/sdb2 /disk2
+donem permisos tambe al
+sudo chmod 777 /disk1/lost+found/
+sudo chmod 777 /disk2/lost+found/
+posem al mysql com a creador amb la comanda
+chown mysql:mysql /disk1
+chown mysql:mysql /disk2
 sudo mount -a per guardar que cada vegada que iniciem la maquina seguexien els canvis
 innodb_data_file_path =  /var/lib/mysql/ibdata:100G;/disk2/mysql/ibdata2:1000M:autoextend
 ```
