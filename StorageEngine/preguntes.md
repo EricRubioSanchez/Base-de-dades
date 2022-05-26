@@ -178,4 +178,7 @@ resta de taules.
 ```
 
 ```
+SHOW ENGINE INNODB STATUS\G;
 ![image](https://user-images.githubusercontent.com/100956247/170527453-048fa460-73c6-4f96-912e-85714fce822f.png)
+![image](https://user-images.githubusercontent.com/100956247/170527622-65c866c9-f944-4da3-a2fe-61e804897314.png)
+
