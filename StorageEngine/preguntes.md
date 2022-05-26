@@ -150,7 +150,7 @@ o Tenir dos fitxers corresponents al tablespace de sistema complint:
                 • /disk1/primer fitxer de dades → simularà un disc dur
                 • /disk2/segon fitxer de dades → simularà un segon disc dur.
 ```
-
+innodb_data_file_path =  /var/lib/mysql/ibdata:100G;/disk2/mysql/ibdata2:1000M:autoextend
 ```
 # ACTIVITAT 5. INNODB part II. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
 1. Partint de l'esquema anterior configura el Percona Server perquè cada taula generi el seu 
