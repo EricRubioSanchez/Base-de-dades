@@ -162,6 +162,8 @@ propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a o
 ```
 
 ```
+![image](https://user-images.githubusercontent.com/100956247/170592796-46d891b8-4570-4835-a2a7-7be68d3db3b6.png)
+
 # ACTIVITAT 6. INNODB part III. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
 1. Crea un tablespace anomenat 'ts1' situat a /discs-mysql/disc1/ i col·loca les taules 
 actor, address i category de la BD Sakila.
