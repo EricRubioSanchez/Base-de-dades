@@ -185,5 +185,7 @@ resta de taules.
 • Quin és l'últim LSN que se li ha fet Checkpoint
 SHOW ENGINE INNODB STATUS\G;
 ![image](https://user-images.githubusercontent.com/100956247/170527453-048fa460-73c6-4f96-912e-85714fce822f.png)
+2. Com podem mirar el número de pàgines modificades (dirty pages)? I el número total de 
+pàgines?
 ![image](https://user-images.githubusercontent.com/100956247/170527622-65c866c9-f944-4da3-a2fe-61e804897314.png)
 
