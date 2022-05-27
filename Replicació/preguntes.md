@@ -101,7 +101,7 @@ o mysql> CHANGE MASTER TO
 Per exemple:
  ◦ pt-table-checksum: https://www.percona.com/doc/percona-toolkit/2.1/pt-table-checksum.html
 ```
- 
+ pt-table-checksum realitza una comprovació de coherència de la rèplica en línia executant consultes de checksum al master, que produeix resultats diferents a les rèpliques que no són coherents amb el master. El DSN opcional especifica l'amfitrió principal. L'estat de sortida de l'eina és diferent de zero si es troben diferències o si es produeixen advertències o errors.
 ```
  ◦ pt-table-sync: https://www.percona.com/doc/percona-toolkit/2.1/pt-table-sync.html
 ```
