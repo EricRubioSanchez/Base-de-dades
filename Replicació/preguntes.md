@@ -38,47 +38,40 @@ Slave IP: 192.168.56.104
 • Crea un backup de la BD a la màquina master utilitzant:
 o $> mysqldump –-user=root –-password=vostrepwd -–master-data=2
 sakila > /tmp/master_backup.sql
-```
+![image](https://user-images.githubusercontent.com/100956247/170603584-41daf3de-6083-4419-9eae-bebce9c7fe14.png)
 
-```
 • Edita el fitxer master_backup.sql i busca la línia que comenci per --CHANGE MASTER TO.... i
 busca els valors MASTER_LOG_FILE i MASTER_LOG_POS.
 ```
-
+Quitem el comentari d'aquets línia
 ```
+![image](https://user-images.githubusercontent.com/100956247/170605360-8c2fcc07-236f-499d-a18b-e8d864d87a9c.png)
+
 ### SLAVE
 o Para el servei de MySQL.
-```
+![image](https://user-images.githubusercontent.com/100956247/170605564-b2d58c18-5592-41c9-8556-255123b7e855.png)
 
-```
 o Modifica el fitxer de configuració /etc/my.conf
 ▪ Comenta els paràmetres log-bin i binlog_format. D'aquesta manera
 desactivarem el sistema de log-bin.
 ```
-
-```
-▪ Assigna un valor al paràmetre server-id (diferent que el del Master)
-```
-
+Per desactivar-ho anem al my.cnf i descomentem la linia que posa #disable_log_bin
 ```
 ▪ Torna engegar el servei MySQL.
-```
+![image](https://user-images.githubusercontent.com/100956247/170606143-3b33b12d-ab02-4dbb-860c-8a43e5cd54aa.png)
 
-```
 ### MASTER
 o Afegeix l'usuari slave amb la IP de la màquina slave
 ▪ mysql> CREATE USER 'slave'@'IP-SERVIDOR-SLAVE'
 -> IDENTIFIED BY 'patata';
-```
+![image](https://user-images.githubusercontent.com/100956247/170606594-232c4838-7d6a-4386-adb3-2eb89d35e0b8.png)
 
-```
 o Afegix el permís de REPLICATION SLAVE a l'usuari que acabes de crear.
 ▪ mysql> GRANT REPLICATION SLAVE ON *.*
 -> TO 'slave'@'IP-SERVIDOR-SLAVE';
 ▪ mysql> FLUSH PRIVILEGES;
-```
+![image](https://user-images.githubusercontent.com/100956247/170606785-71e120d1-ecae-489f-bac2-ba865f12e003.png)
 
-```
 • A la màquina SLAVE executa la següent comanda ajudant-te de les dades del pas 3 i 4:
 o mysql> CHANGE MASTER TO
 -> MASTER_HOST = '<ip-servidor-master>',
