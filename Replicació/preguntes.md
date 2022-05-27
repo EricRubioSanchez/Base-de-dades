@@ -41,8 +41,11 @@ Slave IP: 192.168.56.104
 • Crea un backup de la BD a la màquina master utilitzant:
 o $> mysqldump –-user=root –-password=vostrepwd -–master-data=2
 sakila > /tmp/master_backup.sql
-![image](https://user-images.githubusercontent.com/100956247/170603584-41daf3de-6083-4419-9eae-bebce9c7fe14.png)
 
+![image](https://user-images.githubusercontent.com/100956247/170603584-41daf3de-6083-4419-9eae-bebce9c7fe14.png)
+```
+afago el fitxer creat per el dump el copio al SLAVE i faig source ruta.
+```
 • Edita el fitxer master_backup.sql i busca la línia que comenci per --CHANGE MASTER TO.... i
 busca els valors MASTER_LOG_FILE i MASTER_LOG_POS.
 
