@@ -182,6 +182,7 @@ chown mysql:mysql /disk1
 chown mysql:mysql /disk2
 fem sudo nano /etc/fstab i escrivim el que hi ha a la imatge
 sudo mount -a per guardar que cada vegada que iniciem la maquina seguexien els canvis
+anem al /etc/my.cnf y afegim les linias innodb_directories=/disk;/disk2
 innodb_data_file_path =  /var/lib/mysql/ibdata:100G;/disk2/mysql/ibdata2:1000M:autoextend
 ```
 ![image](https://user-images.githubusercontent.com/100956247/170591619-220579c3-4190-456a-be13-17b7710ac5b9.png)
@@ -190,7 +191,10 @@ innodb_data_file_path =  /var/lib/mysql/ibdata:100G;/disk2/mysql/ibdata2:1000M:a
 propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vULgueu). 
       • Indica quins són els canvis de configuració que has realitzat
 ```
-
+canviem a la linia del /etc/my.cnf 
+innodb_directories=/disk;/disk2
+a 
+innodb_directories=/disk;/disk2;/tspaces
 ```
 ![image](https://user-images.githubusercontent.com/100956247/170592796-46d891b8-4570-4835-a2a7-7be68d3db3b6.png)
 
