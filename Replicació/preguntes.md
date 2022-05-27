@@ -30,10 +30,14 @@ Master
 
 
 • Esbrina quina IP tenen cadascuna de les màquines (master, slave).
-```
+
 Master IP: 192.168.56.103
+![image](https://user-images.githubusercontent.com/100956247/170613231-2d7870e2-343a-440d-8814-f72063b5f2ba.png)
+
 Slave IP: 192.168.56.104
-```
+![image](https://user-images.githubusercontent.com/100956247/170613193-95296a68-a9d4-436f-890d-2d6ae761808b.png)
+
+
 • Crea un backup de la BD a la màquina master utilitzant:
 o $> mysqldump –-user=root –-password=vostrepwd -–master-data=2
 sakila > /tmp/master_backup.sql
