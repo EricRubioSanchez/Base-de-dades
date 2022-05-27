@@ -81,7 +81,8 @@ o mysql> CHANGE MASTER TO
 -> MASTER_PORT = '3306',
 -> MASTER_LOG_FILE = '<valor trobat en el pas 4>',
 -> MASTER_LOG_POS = <valor trobat en el pas 4>,
--> MASTER_CONNECT_RETRY = 10;
+-> MASTER_CONNECT_RETRY = 10,
+-> GET_MASTER_PUBLIC_KEY = 1;
 ![image](https://user-images.githubusercontent.com/100956247/170608360-ba5b9074-89dc-4a5e-ab34-0f5a6ff97bf0.png)
 
 # ACTIVITAT 2 – REPLICACIÓ SEMISÍNCRONA AMB MASTER PASSIU (3 punts)
