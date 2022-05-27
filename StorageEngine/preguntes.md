@@ -218,13 +218,8 @@ resta de taules.
 ![image](https://user-images.githubusercontent.com/100956247/170747362-9e11cb71-676a-4170-8b6b-1081f301637a.png)
 
 3. Comprova que pots realitzar operacions DML a les taules dels dos tablespaces.
-```
+![image](https://user-images.githubusercontent.com/100956247/170750027-a96dcdd6-917a-487c-9297-6b7e24445678.png)
 
-```
-4. Quines comandes i configuracions has realitzat per fer els dos apartats anteriors?
-```
-
-```
 # ACTIVITAT 7. REDOLOG. REALITZA ELS SEGÜENTS APARTATS (2 punts)
 1. Com podem comprovar (Innodb Log Checkpointing):
 • LSN (Log Sequence Number)
