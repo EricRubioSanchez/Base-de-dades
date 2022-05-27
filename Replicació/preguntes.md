@@ -101,11 +101,11 @@ o mysql> CHANGE MASTER TO
 Per exemple:
  ◦ pt-table-checksum: https://www.percona.com/doc/percona-toolkit/2.1/pt-table-checksum.html
 ```
- pt-table-checksum realitza una comprovació de coherència de la rèplica en línia executant consultes de checksum al master, que produeix resultats diferents a les rèpliques que no són coherents amb el master. El DSN opcional especifica l'amfitrió principal. L'estat de sortida de l'eina és diferent de zero si es troben diferències o si es produeixen advertències o errors.
+pt-table-checksum realitza una comprovació de coherència de la rèplica en línia executant consultes de checksum al master, que produeix resultats diferents a les rèpliques que no són coherents amb el master. El DSN opcional especifica l'amfitrió principal. L'estat de sortida de l'eina és diferent de zero si es troben diferències o si es produeixen advertències o errors.
 ```
  ◦ pt-table-sync: https://www.percona.com/doc/percona-toolkit/2.1/pt-table-sync.html
 ```
- 
+Aquesta eina canvia les dades, de manera que quan es sincronitza un servidor que és un slave de rèplica amb els mètodes –replicate o –sync-to-master, sempre fa els canvis al master de rèplica, mai directament a l'slave de rèplica. Aquesta és, en general, l'única manera segura de tornar a sincronitzar una rèplica amb el seu master; els canvis a la rèplica solen ser la font dels problemes en primer lloc. Tanmateix, els canvis que fa al master haurien de ser canvis sense operacions que estableixin les dades als seus valors actuals i, de fet, només afectin la rèplica.
 ```
  # ACTIVITAT 6 – BACKUP (2 punts)
 Mitjançant l’eina XtraBackup de Percona realitza una còpia completa de la BD i una restauració
