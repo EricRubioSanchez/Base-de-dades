@@ -45,9 +45,7 @@ sakila > /tmp/master_backup.sql
 
 • Edita el fitxer master_backup.sql i busca la línia que comenci per --CHANGE MASTER TO.... i
 busca els valors MASTER_LOG_FILE i MASTER_LOG_POS.
-```
-Quitem el comentari d'aquets línia
-```
+
 ![image](https://user-images.githubusercontent.com/100956247/170605360-8c2fcc07-236f-499d-a18b-e8d864d87a9c.png)
 
 ### SLAVE
