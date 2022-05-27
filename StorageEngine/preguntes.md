@@ -215,10 +215,8 @@ actor, address i category de la BD Sakila.
 resta de taules.
 ![image](https://user-images.githubusercontent.com/100956247/170744428-56cd61d2-3307-4693-a4f5-1198d9a41c2c.png)
 ![image](https://user-images.githubusercontent.com/100956247/170744904-f965f25d-f828-48f4-aaf2-215b79cd1a20.png)
+![image](https://user-images.githubusercontent.com/100956247/170747362-9e11cb71-676a-4170-8b6b-1081f301637a.png)
 
-```
-
-```
 3. Comprova que pots realitzar operacions DML a les taules dels dos tablespaces.
 ```
 
