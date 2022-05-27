@@ -213,7 +213,8 @@ actor, address i category de la BD Sakila.
 
 2. Crea un altre tablespace anomenat 'ts2' situat a /discs-mysql/disc2/ i col·loca-hi la 
 resta de taules.
-![image](https://user-images.githubusercontent.com/100956247/170735047-a46d44bc-dca1-4661-9d47-564a6220238e.png)
+![image](https://user-images.githubusercontent.com/100956247/170744233-47285876-7c4b-4d9e-8dae-c793a9f7f19f.png)
+
 
 
 ```
