@@ -2,7 +2,7 @@
 ## CONFIGURACIÓ MASTER
 • Verifica que el paràmetre server-id té un valor numèric (per defecte és 1).
 ```
-Anem al my.cnf i afegim una linia que posi server-id=1
+Anem al my.cnf i afegim una linia que posi server-uuid=1
 ```
 
 • Fes un FLUSH DELS LOGS utilitzant la comanda FLUSH LOGS dins del MySQL
