@@ -208,11 +208,9 @@ iinodb_file_per_table = ON
 1. Crea un tablespace anomenat 'ts1' situat a /discs-mysql/disc1/ i col·loca les taules 
 actor, address i category de la BD Sakila.
 ![image](https://user-images.githubusercontent.com/100956247/170741929-adabe2ae-41a9-4340-a1a7-d65be2b5d856.png)
+![image](https://user-images.githubusercontent.com/100956247/170743341-d17f1661-3825-448e-b560-f18acc866026.png)
 
 
-```
-
-```
 2. Crea un altre tablespace anomenat 'ts2' situat a /discs-mysql/disc2/ i col·loca-hi la 
 resta de taules.
 ![image](https://user-images.githubusercontent.com/100956247/170735047-a46d44bc-dca1-4661-9d47-564a6220238e.png)
