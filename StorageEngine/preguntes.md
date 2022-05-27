@@ -207,7 +207,8 @@ iinodb_file_per_table = ON
 # ACTIVITAT 6. INNODB part III. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
 1. Crea un tablespace anomenat 'ts1' situat a /discs-mysql/disc1/ i col·loca les taules 
 actor, address i category de la BD Sakila.
-![image](https://user-images.githubusercontent.com/100956247/170741639-992dde03-a24d-4e58-a4dd-f117a30636af.png)
+![image](https://user-images.githubusercontent.com/100956247/170741929-adabe2ae-41a9-4340-a1a7-d65be2b5d856.png)
+
 
 ```
 
