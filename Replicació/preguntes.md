@@ -4,7 +4,6 @@
 ```
 Anem al my.cnf i afegim una linia que posi server-id=1
 ```
-![image](https://user-images.githubusercontent.com/100956247/170578968-41ee3a24-c6e6-4ab3-8c5e-714e1c6285d9.png)
 
 • Fes un FLUSH DELS LOGS utilitzant la comanda FLUSH LOGS dins del MySQL
 o mysql> FLUSH LOGS;
