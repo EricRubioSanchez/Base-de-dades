@@ -219,6 +219,7 @@ resta de taules.
 
 3. Comprova que pots realitzar operacions DML a les taules dels dos tablespaces.
 ![image](https://user-images.githubusercontent.com/100956247/170750027-a96dcdd6-917a-487c-9297-6b7e24445678.png)
+![image](https://user-images.githubusercontent.com/100956247/170751590-a364dda1-572e-4552-9100-74469cb06bb4.png)
 
 # ACTIVITAT 7. REDOLOG. REALITZA ELS SEGÜENTS APARTATS (2 punts)
 1. Com podem comprovar (Innodb Log Checkpointing):
