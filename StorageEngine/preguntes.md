@@ -191,10 +191,16 @@ innodb_data_file_path =  /var/lib/mysql/ibdata:100G;/disk2/mysql/ibdata2:1000M:a
 propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vULgueu). 
       • Indica quins són els canvis de configuració que has realitzat
 ```
+afegim el directori:
+mkdir /tspaces
+donem permisos
+chmod 777 /tspaces
+chown mysql:mysql /tspaces
 canviem a la linia del /etc/my.cnf 
 innodb_directories=/disk;/disk2
 a 
 innodb_directories=/disk;/disk2;/tspaces
+iinodb_file_per_table = ON
 ```
 ![image](https://user-images.githubusercontent.com/100956247/170592796-46d891b8-4570-4835-a2a7-7be68d3db3b6.png)
 
@@ -206,6 +212,9 @@ actor, address i category de la BD Sakila.
 ```
 2. Crea un altre tablespace anomenat 'ts2' situat a /discs-mysql/disc2/ i col·loca-hi la 
 resta de taules.
+![image](https://user-images.githubusercontent.com/100956247/170735047-a46d44bc-dca1-4661-9d47-564a6220238e.png)
+
+
 ```
 
 ```
