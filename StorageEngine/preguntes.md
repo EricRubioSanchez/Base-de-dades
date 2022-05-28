@@ -201,6 +201,10 @@ innodb_directories=/disk;/disk2
 a 
 innodb_directories=/disk;/disk2;/tspaces
 iinodb_file_per_table = ON
+llavors anem al mysql i quan creem una taula al final posem DATA DIRECTORY = '/tspaces';
+Exemple:
+CREATE TABLE prova (prova INT) DATA DIRECTORY = '/tspaces';
+Query OK, 0 rows affected (0,02 sec)
 ```
 ![image](https://user-images.githubusercontent.com/100956247/170592796-46d891b8-4570-4835-a2a7-7be68d3db3b6.png)
 
